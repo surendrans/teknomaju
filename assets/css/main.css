@@ -911,8 +911,8 @@ section,
 
 /* Unique Class for the Heading */
 .transform-heading {
-  font-size: 24px; /* Reduced font size */
-  font-weight: 500;
+  font-size: 20px; /* Reduced font size */
+  /* font-weight: 300; */
   color: #fff;
   margin-bottom: 15px; /* Gap between heading and text */
 }
