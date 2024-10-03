@@ -255,7 +255,7 @@ h6 {
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500; /* Increased font weight for readability */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -263,42 +263,40 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
-  }
-
-  .navmenu li:last-child a {
-    padding-right: 0;
-  }
-
-  .navmenu li:hover>a,
+  .navmenu a:hover,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
+    
   }
 
   .navmenu .dropdown ul {
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
     background: var(--nav-dropdown-background-color);
-    display: block;
+    display: none; /* Initially hidden */
     position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
+    left: 0;
+    top: 100%; /* Position below the parent item */
     opacity: 0;
-    transition: 0.3s;
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: max-content; /* Fit content width */
+    min-width: 200px; /* Minimum width */
+  }
+
+  .navmenu .dropdown:hover > ul {
+    display: block; /* Show on hover */
+    opacity: 1; /* Fade in */
+    visibility: visible; /* Make visible */
   }
 
   .navmenu .dropdown ul li {
-    min-width: 200px;
+    min-width: 200px; /* Consistent minimum width for items */
   }
 
   .navmenu .dropdown ul a {
@@ -308,33 +306,25 @@ h6 {
     color: var(--nav-dropdown-color);
   }
 
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
+  .navmenu .dropdown ul a:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Hover background for dropdown items */
+    color:#df1529;
   }
 
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
+  /* Style for nested dropdowns */
   .navmenu .dropdown .dropdown ul {
+    left: 100%; /* Positioned to the right of the parent dropdown */
     top: 0;
-    left: -90%;
-    visibility: hidden;
+    display: none; /* Initially hidden */
+    opacity: 0;
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
+  .navmenu .dropdown .dropdown:hover > ul {
+    display: block; /* Show nested dropdown on hover */
+    opacity: 1; /* Fade in */
+    visibility: visible; /* Make visible */
   }
 }
 
@@ -382,43 +372,13 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  }
-
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-  }
-
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
+  .navmenu a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle hover background */
   }
 
   .navmenu .dropdown ul {
     position: static;
-    display: none;
+    display: none; /* Initially hidden */
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
@@ -428,12 +388,8 @@ h6 {
     transition: all 0.5s ease-in-out;
   }
 
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
+  .navmenu .dropdown > .dropdown-active {
+    display: block; /* Show on active */
     background-color: rgba(33, 37, 41, 0.03);
   }
 
@@ -459,10 +415,61 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
+
+/* General Styles for Dropdown */
+.navmenu ul {
+  position: relative;
+}
+
+.navmenu .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff; /* Change to your desired color */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 0; /* Spacing inside dropdown */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  z-index: 1000; /* Ensure it appears on top */
+}
+
+/* Show dropdown on hover */
+.navmenu .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Styles for Dropdown Links */
+.navmenu .dropdown-menu a {
+  padding: 10px 20px; /* Padding for links */
+  color: #333; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.2s ease; /* Transition for hover effect */
+}
+
+.navmenu .dropdown-menu a:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+/* Deep Dropdown Styles */
+.navmenu .dropdown .dropdown-menu .dropdown-menu {
+  left: 100%; /* Position to the right */
+  top: 0; /* Align to top */
+  margin-left: 0; /* Remove margin */
+}
+
+/* Responsive Mobile Nav */
+@media (max-width: 1199px) {
+  .navmenu .dropdown-menu {
+    position: static; /* Make dropdown static on mobile */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove shadow */
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -471,26 +478,21 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding-bottom: 50px;
+  padding: 50px 0;
   position: relative;
 }
 
 .footer .footer-top {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .footer .footer-about .logo {
-  margin-bottom: 25px;
-}
-
-.footer .footer-about .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+  margin-bottom: 20px;
 }
 
 .footer .footer-about .logo span {
   color: var(--heading-color);
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
   font-family: var(--heading-font);
@@ -518,10 +520,11 @@ h6 {
 .footer .social-links a:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
+  transform: scale(1.1); /* Scale effect on hover */
 }
 
 .footer h4 {
-  font-size: 16px;
+  font-size: 18px; /* Increased size for better visibility */
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
@@ -537,26 +540,11 @@ h6 {
   margin: 0;
 }
 
-.footer .footer-links ul i {
-  padding-right: 2px;
-  font-size: 12px;
-  line-height: 0;
-}
-
-.footer .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.footer .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
 .footer .footer-links ul a {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   display: inline-block;
-  line-height: 1;
+  line-height: 1.5; /* Adjusted line height */
+  padding: 6px;
 }
 
 .footer .footer-links ul a:hover {
@@ -568,8 +556,7 @@ h6 {
 }
 
 .footer .copyright {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 0;
   background-color: color-mix(in srgb, var(--default-color), transparent 95%);
 }
 
@@ -581,6 +568,45 @@ h6 {
   margin-top: 6px;
   font-size: 13px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+      text-align: left; /* Align text to the left */
+  }
+
+  .footer .footer-about {
+      text-align: left; /* Align logo and paragraph to the left */
+  }
+
+  .footer .social-links {
+      justify-content: flex-start; /* Align social links to the start */
+  }
+
+  .footer .footer-links {
+      text-align: left; /* Keep links aligned to the left */
+      margin-bottom: 20px; /* Added margin for spacing */
+  }
+
+  .footer .footer-links ul {
+      padding-left: 0; /* Remove padding from the list */
+  }
+
+  .footer .footer-contact {
+      text-align: left; /* Align contact info to the left */
+  }
+
+  .footer .footer-contact p {
+      margin: 5px 0; /* Keep consistent spacing for contact info */
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .footer-links {
+      margin-bottom: 15px; /* Adjusted bottom margin for smaller devices */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -696,11 +722,33 @@ h6 {
   padding-left: 10px;
 }
 
+.breadcrumb {
+  font-size: 1.5rem; /* Increase the font size for the breadcrumb */
+}
+
 .page-title nav ol li+li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.info-item {
+  height: 220px; /* Set fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional background color */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .info-item {
+    height: auto;  /* Let the height adjust automatically on small screens */
+  }
 }
 
 /*--------------------------------------------------------------
@@ -728,7 +776,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
   position: relative;
 }
 
@@ -782,14 +830,15 @@ section,
   z-index: 1;
 }
 
+
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  /* background: color-mix(in srgb, var(--background-color), transparent 50%); */
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   inset: 0;
   z-index: 2;
 }
-
 .hero .container {
   position: relative;
   z-index: 3;
@@ -800,6 +849,7 @@ section,
   font-size: 44px;
   font-weight: 700;
 }
+
 
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -850,6 +900,80 @@ section,
 
   .hero p {
     font-size: 18px;
+  }
+}
+
+/* Unique Class for the Section */
+.transform-section {
+  padding: 60px 0;
+  margin-top: 40px; /* Added margin-top for spacing */
+}
+
+/* Unique Class for the Heading */
+.transform-heading {
+  font-size: 24px; /* Reduced font size */
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 15px; /* Gap between heading and text */
+}
+
+/* Container for the Paragraphs */
+.transform-text-content {
+  margin-bottom: 20px; /* Proper margin-bottom applied after the paragraphs */
+}
+
+/* Unique Class for the Paragraph */
+.transform-paragraph {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 5px; /* Smaller gap between the two paragraphs */
+}
+
+/* Second Paragraph as a New Line */
+.second-line {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Unique Class for the Button */
+.btn-transform {
+  background-color: #0032A0; /* Button background color */
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-transform:hover {
+  background-color: #002080; /* Darken button on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .transform-heading {
+    font-size: 24px; /* Reduced heading size on mobile */
+  }
+
+  .transform-paragraph {
+    font-size: 14px; /* Reduced paragraph size on mobile */
+  }
+
+  .btn-transform {
+    font-size: 14px; /* Adjust button font size for mobile */
+  }
+  
+  .transform-section {
+    padding: 40px 15px; /* Add padding on mobile for spacing */
+  }
+
+  .col-md-10 {
+    max-width: 100%; /* Ensure content fits well on mobile */
   }
 }
 
@@ -1122,101 +1246,81 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
-.features .features-item {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+.features-grid {
+  display: flex; /* Changed from grid to flexbox for flexible layout */
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: center; /* Center the items */
+  margin-top: 30px; /* Space above the grid */
 }
 
-.features .features-item+.features-item {
-  margin-top: 100px;
+/* Feature Box Styles */
+.feature-box {
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  color: var(--accent-color);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Added transform for scaling */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Align children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
 }
 
-@media (max-width: 768px) {
-  .features .features-item+.features-item {
-    margin-top: 40px;
-  }
+/* Icon Container */
+.icon-container {
+  width: 60px; /* Width of the icon circle */
+  height: 60px; /* Height of the icon circle */
+  border-radius: 50%; /* Make the container circular */
+  background-color: var(--accent-color); /* Circle color */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin-bottom: 15px; /* Space below the icon */
+  transition: transform 0.3s; /* Animation for scaling */
 }
 
-.features .features-item h3 {
-  font-weight: 700;
-  font-size: 26px;
+/* Icon Style */
+.icon {
+  color: white; /* Icon color */
+  font-size: 24px; /* Icon size */
 }
 
-.features .features-item .btn-get-started {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 8px 30px 10px 30px;
-  border-radius: 4px;
-}
-
-.features .features-item .btn-get-started:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
-}
-
-.features .features-item ul {
-  list-style: none;
-  padding: 0;
-}
-
-.features .features-item ul li {
-  padding-bottom: 10px;
-  display: flex;
-  align-items: flex-start;
-}
-
-.features .features-item ul li:last-child {
-  padding-bottom: 0;
-}
-
-.features .features-item ul i {
-  font-size: 20px;
-  padding-right: 4px;
+/* Hover State */
+.feature-box:hover {
+  background-color: white;
   color: var(--accent-color);
 }
 
-.features .features-item img {
-  border: 6px solid var(--surface-color);
-  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+.feature-box:hover .icon-container {
+  transform: scale(1.1); /* Scale up the icon circle */
 }
 
-.features .features-item .features-img-bg {
-  position: relative;
-  min-height: 500px;
+/* Heading and Paragraph */
+.feature-box h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-@media (max-width: 640px) {
-  .features .features-item .features-img-bg {
-    min-height: 300px;
+.feature-box p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .features-grid {
+    flex-direction: column; /* Stack items on smaller screens */
   }
 }
 
-.features .features-item .features-img-bg img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.features .features-item .image-stack {
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.features .features-item .image-stack .stack-back {
-  grid-column: 4/-1;
-  grid-row: 1;
-  width: 100%;
-  z-index: 1;
-}
-
-.features .features-item .image-stack .stack-front {
-  grid-row: 1;
-  grid-column: 1/span 8;
-  margin-top: 20%;
-  width: 100%;
-  z-index: 2;
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column; /* Stack items on mobile screens */
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1941,6 +2045,7 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
@@ -2862,4 +2967,74 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/* About Sections Container */
+.about-sections {
+  padding: 60px 0;
+}
+
+/* Image Styling */
+.about-image {
+  width: 100%;
+  border-radius: 15px; /* Rounded corners */
+  max-height: 350px;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Button Styling */
+.btn-journey {
+  display: inline-block;
+  background-color: #0032A0; /* Button background color */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 50px; /* Fully rounded corners */
+  margin-bottom: 20px; /* Space below button */
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Heading Styling */
+.about-heading {
+  font-size: 32px;
+  font-weight: 900; /* Extra bold */
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Paragraph Styling */
+.about-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Flex Alignment */
+.row {
+  display: flex;
+  align-items: stretch; /* Ensures both columns are equal height */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 28px; /* Adjust heading size for smaller screens */
+  }
+
+  .about-text {
+    font-size: 14px; /* Adjust paragraph size for smaller screens */
+  }
+
+  .btn-journey {
+    padding: 8px 14px; /* Adjust button padding for smaller screens */
+  }
+
+  .about-image {
+    max-height: 300px; /* Limit height for smaller screens */
+  }
 }

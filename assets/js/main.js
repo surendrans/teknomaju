@@ -216,3 +216,49 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// form validation
+
+function validateForm() {
+  // Get form elements
+  const firstName = document.forms[0]["first-name"].value;
+  const lastName = document.forms[0]["last-name"].value;
+  const email = document.forms[0]["email"].value;
+  const phone = document.forms[0]["phone"].value;
+  const message = document.forms[0]["message"].value;
+
+  // Validate First Name
+  if (!firstName) {
+      alert("Please enter your first name.");
+      return false;
+  }
+
+  // Validate Last Name
+  if (!lastName) {
+      alert("Please enter your last name.");
+      return false;
+  }
+
+  // Validate Email
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+  }
+
+  // Validate Phone Number
+  const phonePattern = /^\d{10}$/;
+  if (!phone || !phonePattern.test(phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return false;
+  }
+
+  // Validate Message
+  if (!message) {
+      alert("Please enter a message.");
+      return false;
+  }
+
+  // If all validations pass
+  return true;
+}
