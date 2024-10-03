@@ -943,11 +943,12 @@ section,
   color: #fff;
   padding: 12px 24px;
   font-size: 16px;
-  border-radius: 50px;
-  font-weight: bold;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
+  letter-spacing: 1px;
   transition: background-color 0.3s ease;
+  
 }
 
 .btn-transform:hover {
