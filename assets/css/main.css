@@ -155,7 +155,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-width: 80px;
   margin-right: 8px;
 }
 
@@ -1517,6 +1517,29 @@ section,
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
   bottom: 0;
+}
+
+
+/* -------------------------------------------------------------
+#Process section
+---------------------------------------------------------------- */
+.alt-col{
+}
+
+.alt-col {
+  background-color:  color-mix(in srgb, var(--default-color), transparent 95%);
+  padding: 20px; /* Add padding for the section */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+@media (max-width: 767px) { /* For mobile responsiveness */
+  .alt-col {
+      padding: 15px; /* Smaller padding on mobile */
+  }
+
+  .alt-col h2 {
+      font-size: 1.5rem; /* Adjust heading size on mobile */
+  }
 }
 
 /*--------------------------------------------------------------
