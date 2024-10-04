@@ -846,8 +846,8 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 44px;
-  font-weight: 700;
+  font-size: 34px;
+  font-weight: 600;
 }
 
 
@@ -895,7 +895,7 @@ section,
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero p {
@@ -1116,56 +1116,145 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Stats Section
+# Career Section
 --------------------------------------------------------------*/
-.stats {
-  position: relative;
-  padding: 120px 0;
+.build-future-section {
+  padding: 50px 0;
 }
 
-.stats img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+.build-future-section .content-wrapper {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: black;
+  width: 80%; /* Set the width of the background to 80% */
+  border-radius: 15px; /* Border radius for rounded corners */
+  padding: 30px; /* Padding inside the box for content */
 }
 
-.stats:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 40%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.stats .container {
-  position: relative;
-  z-index: 3;
-}
-
-.stats .stats-item {
-  padding: 30px;
-  width: 100%;
-}
-
-.stats .stats-item span {
-  font-size: 48px;
-  display: block;
-  color: var(--default-color);
+.build-future-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
-.stats .stats-item p {
-  padding: 0;
-  margin: 0;
-  font-family: var(--heading-font);
-  font-size: 16px;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+.build-future-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .build-future-section h2 {
+    font-size: 28px;
+  }
+
+  .build-future-section p {
+    font-size: 16px;
+  }
+
+  .build-future-section .content-wrapper {
+    width: 90%; /* Adjust width for smaller devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .build-future-section h2 {
+    font-size: 24px;
+  }
+
+  .build-future-section p {
+    font-size: 14px;
+  }
+
+  .build-future-section .content-wrapper {
+    width: 95%; /* Full width for mobile */
+  }
+}
+.icon-card-section {
+  padding: 50px 0;
+  text-align: center; /* Center the section heading */
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column; /* Stack icon, heading, and paragraph vertically */
+  align-items: center; /* Center items horizontally */
+  background-color: white; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  margin: 20px; /* Spacing between cards */
+  transition: transform 0.3s; /* Smooth transition on hover */
+  height: 200px; /* Set height for cards */
+}
+
+.icon-card i {
+  font-size: 40px; /* Icon size */
+  color: var(--accent-color); /* Icon color */
+  margin-bottom: 10px; /* Space below the icon */
+}
+
+.icon-card h4 {
+  font-size: 20px; /* Heading size */
+  font-weight: bold; /* Bold heading */
+  margin: 10px 0; /* Space above and below the heading */
+}
+
+.icon-card p {
+  margin: 0; /* No margin for paragraph */
+  font-size: 14px; /* Paragraph size */
+  color: #333; /* Dark color for text */
+}
+
+/* Add hover effect */
+.icon-card:hover {
+  transform: translateY(-5px); /* Raise the card on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .icon-card {
+    margin: 15px 0; /* Vertical spacing */
+  }
+}
+
+@media (max-width: 576px) {
+  .icon-card {
+    /* Stacking is already handled by flex-direction */
+  }
+}
+
+
+.dream-career-section {
+  padding: 50px 0; /* Top and bottom padding */
+  /* background-color: var(--default-color);  */
+}
+
+.dream-career-section h2 {
+  font-size: 28px; /* Heading size */
+  font-weight: bold; /* Bold heading */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #000; /* Dark color for text */
+}
+
+.dream-career-section p {
+  font-size: 16px; /* Paragraph size */
+  color: #000; /* Lighter color for paragraph */
+  max-width: 800px; /* Max width for paragraph */
+  margin: 0 auto; /* Center the paragraph */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dream-career-section h2 {
+    font-size: 24px; /* Adjust heading size for smaller screens */
+  }
+
+  .dream-career-section p {
+    font-size: 14px; /* Adjust paragraph size for smaller screens */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Services Section
