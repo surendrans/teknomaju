@@ -939,15 +939,20 @@ section,
 
 /* Unique Class for the Button */
 .btn-transform {
-  background-color: #0032A0; /* Button background color */
-  color: #fff;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 5px;
   border: none;
   cursor: pointer;
+  background-color: #002080;
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
   letter-spacing: 1px;
-  transition: background-color 0.3s ease;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   
 }
 
