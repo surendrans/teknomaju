@@ -3192,15 +3192,14 @@ section,
 
 /* Main Heading Styling */
 .main-heading {
-  background-color: #1e90ff;
-  color: #fff;
+  color: var(--accent-color);
   padding: 20px 30px;
   text-align: center;
   border-radius: 12px;
-  font-size: 2.4rem;
+  font-size: 2rem;
   letter-spacing: 0.7px;
   font-weight: 700;
-  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.1);
+  /* box-shadow: 0 6px 20px rgba(30, 144, 255, 0.1); */
 }
 
 /* Paragraph Below Main Heading */
@@ -3232,6 +3231,9 @@ section,
   transition: all 0.3s ease;
   overflow: hidden;
 }
+.content-container h1{
+  color: var(--accent-color);;
+}
 
 .service-box.left {
   flex-direction: row-reverse;
@@ -3251,7 +3253,7 @@ section,
 .service-heading {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #1e90ff;
+  color: var(--accent-color);;
   margin-bottom: 10px;
 }
 
