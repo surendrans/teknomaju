@@ -834,7 +834,7 @@ section,
 .hero:before {
   content: "";
   /* background: color-mix(in srgb, var(--background-color), transparent 50%); */
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -3154,5 +3154,164 @@ section,
 
   .about-image {
     max-height: 300px; /* Limit height for smaller screens */
+  }
+}
+.job-section {
+  background-color: #f4f7fc;
+}
+
+.job-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0032A0;
+}
+
+.job-section .btn-primary {
+  background-color: #0032A0;
+  border-color: #0032A0;
+  font-size: 1.2rem;
+}
+.job-btn{
+  background-color: var(--accent-color);
+  color: #f1f1f1;
+  padding: 10px 16px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.job-btn:hover{
+  background-color: #002080e3;
+}
+
+/* General Container Styling */
+.content-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Main Heading Styling */
+.main-heading {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 20px 30px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 2.4rem;
+  letter-spacing: 0.7px;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.1);
+}
+
+/* Paragraph Below Main Heading */
+.main-paragraph {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Service Boxes Container */
+.service-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Service Box Styling */
+.service-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.service-box.left {
+  flex-direction: row-reverse;
+}
+
+.service-box.right {
+  flex-direction: row;
+}
+
+/* Hover Effect for Service Box */
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Box Heading */
+.service-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1e90ff;
+  margin-bottom: 10px;
+}
+
+/* Service Box Text */
+.service-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Padding Between Paragraphs */
+.padded-paragraph {
+  margin-bottom: 15px;
+}
+
+/* Service Image Container */
+.service-image-container {
+  width: 40%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-image-container:hover .service-image {
+  transform: scale(1.05);
+}
+
+/* Text Container */
+.service-text-container {
+  width: 55%;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .main-paragraph{
+    text-align: center;
+  }
+  .service-box {
+    flex-direction: column;
+  }
+
+  .service-image-container,
+  .service-text-container {
+    width: 100%;
+  }
+
+  .service-box.left {
+    flex-direction: column;
+  }
+
+  .service-box.right {
+    flex-direction: column;
   }
 }
