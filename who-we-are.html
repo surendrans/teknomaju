@@ -50,14 +50,13 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li class="dropdown">
-            <a href=""><span class="me-2">About</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+            <a href="" class="active"><span class="me-2">About</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
             <ul class="dropdown-menu">
-              <li class="dropdown">
-                <a href="who-we-are.html" class="active"><span>Who We are</span></a></li>
-                <a href="#"><span>Our Process</span></a></li>
-              <li><a href="careers.html">Careers</a></li>
+                <li><a href="who-we-are.html"><span>Who We are</span></a></li>
+                <li><a href="our-process.html"><span>Our Process</span></a></li>
+                <li><a href="careers.html" class="active">Careers</a></li> <!-- Ensure the 'active' class is here -->
             </ul>
-          </li>
+        </li>
           <!-- <li><a href="index.html#about">About</a></li> -->
           <li class="dropdown">
             <a href="#"><span class="me-2">Services</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
@@ -295,7 +294,22 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Get the current page URL
+    const currentPage = window.location.pathname;
 
+    // Check if the current page is 'careers.html'
+    if (currentPage.includes("who-we-are.html")) {
+        // Add 'active' to the About link
+        document.querySelector('.navmenu .dropdown > a.active').classList.add("active");
+        
+        // Also add 'active' to the Careers submenu link
+        document.querySelector('.dropdown-menu a[href="who-we-are.html"]').classList.add("active");
+    }
+});
+
+  </script>
 </body>
 
 </html>

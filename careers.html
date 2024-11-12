@@ -50,14 +50,14 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li class="dropdown">
-            <a href=""><span class="me-2">About</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+            <a href="" class="active"><span class="me-2">About</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
             <ul class="dropdown-menu">
-              <li class="dropdown">
-                <a href="who-we-are.html"><span>Who We are</span></a></li>
-                <a href="#"><span>Our Process</span></a></li>
-              <li><a href="careers.html" class="active">Careers</a></li>
+                <li><a href="who-we-are.html"><span>Who We are</span></a></li>
+                <li><a href="our-process.html"><span>Our Process</span></a></li>
+                <li><a href="careers.html" class="active">Careers</a></li> <!-- Ensure the 'active' class is here -->
             </ul>
-          </li>
+        </li>
+        
           <!-- <li><a href="index.html#about">About</a></li> -->
           <li class="dropdown">
             <a href="#"><span class="me-2">Services</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
@@ -199,7 +199,7 @@
           <div class="col-lg-6 col-md-12" data-aos="fade-left">
             <h2 class="about-heading">Build your future with us</h2>
             <p class="about-text">We strive to create an environment where employees can unlock their full potential. We encourage our team to explore new technologies and stay ahead of the curve. Join us to pave the way toward your dream career.</p>
-            <button class="btn-journey">Join Team</button>
+            <a href="contact.html#contact-form" class="btn-journey">Join Team</a>
           </div>
       
           <!-- Image Column -->
@@ -354,6 +354,23 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Get the current page URL
+    const currentPage = window.location.pathname;
+
+    // Check if the current page is 'careers.html'
+    if (currentPage.includes("careers.html")) {
+        // Add 'active' to the About link
+        document.querySelector('.navmenu .dropdown > a.active').classList.add("active");
+        
+        // Also add 'active' to the Careers submenu link
+        document.querySelector('.dropdown-menu a[href="careers.html"]').classList.add("active");
+    }
+});
+
+  </script>
 
 </body>
 
