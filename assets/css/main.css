@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #32353a; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0032A0; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #D12124; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -155,7 +155,8 @@ h6 {
 }
 
 .header .logo img {
-  max-width: 50px;
+  width: 100%;
+  height: 90px;
   margin-right: 8px;
 }
 
@@ -330,7 +331,7 @@ h6 {
 
 /* Change the color of the icons inside the dropdown */
 .navmenu .dropdown-menu i {
-  color: #0032A0; /* Icon color */
+  color: #D12124; /* Icon color */
   margin-right: 10px; /* Add some space between the icon and text */
 }
 
@@ -341,7 +342,7 @@ h6 {
 
 /* Change the color of the icon for active dropdown menu items */
 .navmenu .dropdown-menu a:hover i {
-  color: #0032A0; /* Ensure icon color changes on hover as well */
+  color: #D12124; /* Ensure icon color changes on hover as well */
 }
 
 /* Optional: For better alignment of the dropdown icons and text */
@@ -972,7 +973,7 @@ section,
 .btn-transform {
   border: none;
   cursor: pointer;
-  background-color: #002080;
+  background-color:#D12124 ;
   color: var(--contrast-color);
   font-family: var(--heading-font);
   font-weight: 500;
@@ -988,7 +989,7 @@ section,
 }
 
 .btn-transform:hover {
-  background-color: #002080c9; /* Darken button on hover */
+  background-color: #d12124a5; /* Darken button on hover */
 }
 
 /* Responsive Adjustments */
@@ -1429,11 +1430,13 @@ section,
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #D12124;
 }
 
 .feature-box p {
   font-size: 16px;
   line-height: 1.6;
+  color: black;
 }
 
 /* Responsive Adjustments */
@@ -2889,7 +2892,7 @@ section,
 /* Button Styling */
 .btn-journey {
   display: inline-block;
-  background-color: #0032A0; /* Button background color */
+  background-color: #D12124; /* Button background color */
   color: aliceblue;
   padding: 10px 20px;
   font-size: 14px;
@@ -2903,7 +2906,7 @@ section,
 
 .btn-journey:hover{
   color: aliceblue;
-  background-color: #0033a0df;
+  background-color: #d12124dc;
 }
 
 /* Heading Styling */
@@ -2953,12 +2956,12 @@ section,
 .job-section h2 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #0032A0;
+  color: #D12124;
 }
 
 .job-section .btn-primary {
-  background-color: #0032A0;
-  border-color: #0032A0;
+  background-color: #D12124;
+  border-color: #D12124;
   font-size: 1.2rem;
 }
 .job-btn{
@@ -2969,7 +2972,7 @@ section,
   transition: all 0.2s;
 }
 .job-btn:hover{
-  background-color: #002080e3;
+  background-color: #d12124d3
 }
 
 /* General Container Styling */
@@ -3135,7 +3138,7 @@ section,
 }
 
 .custom-section .bi-check-circle-fill {
-  color: #0032A0;
+  color: #D12124;
   margin-right: 10px;
 }
 
