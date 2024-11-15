@@ -156,7 +156,7 @@ h6 {
 
 .header .logo img {
   width: 100%;
-  height: 80px;
+  height: 90px;
   margin-right: 8px;
 }
 
@@ -1401,14 +1401,27 @@ section,
   width: 60px; /* Width of the icon circle */
   height: 60px; /* Height of the icon circle */
   border-radius: 50%; /* Make the container circular */
-  background-color: var(--accent-color); /* Circle color */
   display: flex; /* Flexbox for centering */
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
   margin-bottom: 15px; /* Space below the icon */
   transition: transform 0.3s; /* Animation for scaling */
 }
-
+.icon-container i {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 0;
+  transition: all 0.4s ease-out 0s;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  color: var(--accent-color);
+  transition: 0.3s all;
+}
 /* Icon Style */
 .icon {
   color: white; /* Icon color */
@@ -1423,6 +1436,11 @@ section,
 
 .feature-box:hover .icon-container {
   transform: scale(1.1); /* Scale up the icon circle */
+}
+
+.icon-container:hover i {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
 }
 
 /* Heading and Paragraph */
@@ -1595,7 +1613,7 @@ section,
 .team .member .member-img .social {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2879,6 +2897,7 @@ section,
 /* About Sections Container */
 .about-sections {
   padding: 60px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Image Styling */
@@ -2888,6 +2907,38 @@ section,
   max-height: 350px;
   object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
+
+/* Box around the image */
+.image-container {
+  background-color: #000; /* Black background */
+  padding: 20px; /* Increased space around the image */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Ensures the image fits within the rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+  max-width: 100%; /* Ensure the box does not overflow its container */
+}
+
+.image-container:hover {
+  transform: scale(1.05); /* Slightly zooms the image on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* More intense shadow on hover */
+}
+
+/* Ensure image columns are responsive */
+@media (max-width: 768px) {
+  .image-container {
+    padding: 10px; /* Less padding on small screens */
+  }
+  .about-sections {
+    padding: 20px; /* Adjust container padding on smaller screens */
+  }
+}
+
+/* Prevent horizontal scrolling */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 
 /* Button Styling */
 .btn-journey {
@@ -3118,7 +3169,7 @@ section,
 }
 
 .section-border{
-  border: 4px solid #002080;
+  border: 4px solid aliceblue;
   border-radius: 20px;
   padding: 30px 20px;
 }
@@ -3159,5 +3210,221 @@ section,
   .custom-section .row {
       flex-direction: column;
       gap: 25px;
+  }
+}
+
+/* services advantages */
+/* Skeleton Loader Style */
+.skeleton-loader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ecf4fb; /* Light background */
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  animation: skeleton 2s infinite ease-in-out;
+}
+
+.skeleton-loader .skeleton-number {
+  width: 50px;
+  height: 50px;
+  background-color: #bdc3c7;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.skeleton-loader .skeleton-text {
+  flex: 1;
+}
+
+.skeleton-loader .skeleton-title {
+  width: 60%;
+  height: 18px;
+  background-color: #bdc3c7;
+  margin-bottom: 10px;
+}
+
+.skeleton-loader .skeleton-description {
+  width: 90%;
+  height: 14px;
+  background-color: #bdc3c7;
+  margin-bottom: 8px;
+}
+
+/* Animation for Skeleton */
+@keyframes skeleton {
+  0% {
+    background-color: #ecf4fb;
+  }
+  50% {
+    background-color: #d6dde1;
+  }
+  100% {
+    background-color: #ecf4fb;
+  }
+}
+
+/* Real Content */
+.advantages-section {
+  padding: 50px 20px;
+  background-color: #f4f6f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.advantages-heading {
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.advantage-item {
+  display: flex;
+  align-items: flex-start; /* Align items vertically */
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.advantage-number {
+  font-size: 2rem;
+  color: #D12124; /* Updated color for the number */
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #ecf4fb;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantage-content {
+  flex: 1;
+}
+
+.advantage-title {
+  font-size: 1.3rem;
+  color: #34495e;
+  font-weight: 600;
+  margin-bottom: 10px; /* Less margin for tight vertical alignment */
+}
+
+.advantage-text {
+  font-size: 1rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-top: 0; /* Ensures there’s no additional space between the heading and paragraph */
+}
+
+.advantage-icon {
+  font-size: 1.6rem;
+  color: #3498db;
+  margin-right: 15px;
+}
+
+/* Add responsive design for better mobile experience */
+@media screen and (max-width: 768px) {
+  .advantage-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .advantage-number {
+    margin-bottom: 15px;
+  }
+
+  .advantage-content {
+    width: 100%;
+  }
+}
+/* benefits section */
+/* Styling for the new Benefits section */
+.benefits-section {
+  padding: 50px 20px;
+  background-color: #f4f6f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-heading {
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start; /* Align items vertically */
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-number {
+  font-size: 2rem;
+  color: #D12124; /* Red color for the number */
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #ecf4fb;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefit-content {
+  flex: 1;
+}
+
+.benefit-title {
+  font-size: 1.3rem;
+  color: #34495e;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.benefit-text {
+  font-size: 1rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+.benefit-icon {
+  font-size: 1.6rem;
+  color: #3498db;
+  margin-right: 15px;
+}
+
+/* Add responsive design for better mobile experience */
+@media screen and (max-width: 768px) {
+  .benefit-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .benefit-number {
+    margin-bottom: 15px;
+  }
+
+  .benefit-content {
+    width: 100%;
   }
 }
