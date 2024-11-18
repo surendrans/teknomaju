@@ -500,7 +500,7 @@ h6 {
 .footer {
   color: var(--default-color);
   background-color: #858e953f;
-  /* background-color: color-mix(in srgb, var(--default-color), transparent 95%); */
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
   font-size: 14px;
   padding: 50px 0;
   position: relative;
@@ -2913,6 +2913,7 @@ section,
   background-color: #000; /* Black background */
   padding: 20px; /* Increased space around the image */
   border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
   overflow: hidden; /* Ensures the image fits within the rounded corners */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
   max-width: 100%; /* Ensure the box does not overflow its container */
@@ -2974,6 +2975,7 @@ body, html {
   font-size: 16px;
   line-height: 1.7;
   color: #555;
+  text-align: justify;
 }
 
 /* Flex Alignment */
@@ -3029,15 +3031,15 @@ body, html {
 /* General Container Styling */
 .content-container {
   max-width: 1000px;
-  margin: 60px auto;
-  padding: 30px;
+  margin: 20px auto;
+  /* padding: 30px; */
   font-family: 'Roboto', sans-serif;
 }
 
 /* Main Heading Styling */
 .main-heading {
   color: var(--accent-color);
-  padding: 20px 30px;
+  padding: 10px 30px;
   text-align: center;
   border-radius: 12px;
   font-size: 2rem;
@@ -3095,7 +3097,7 @@ body, html {
 
 /* Service Box Heading */
 .service-heading {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: var(--accent-color);;
   margin-bottom: 10px;
@@ -3103,10 +3105,11 @@ body, html {
 
 /* Service Box Text */
 .service-text {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 1.7;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  text-align: justify;
 }
 
 /* Padding Between Paragraphs */
@@ -3123,12 +3126,13 @@ body, html {
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 }
 
-.service-image {
+.service-image  {
   width: 100%;
-  height: auto;
+  height: 500px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
+
 
 .service-image-container:hover .service-image {
   transform: scale(1.05);
@@ -3166,6 +3170,7 @@ body, html {
 .custom-section {
   background-color: black;
   padding: 50px 0;
+  width: 100%;
 }
 
 .section-border{
@@ -3200,7 +3205,7 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   text-align: left;
 }
 .centered-text h2{
@@ -3373,6 +3378,109 @@ body, html {
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
+/* Benefits Section */
+.benefits-section {
+  padding: 50px 0;
+  background-color: #F4F8FB;
+}
+
+/* Section Header */
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-title2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title2::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #D12124;
+}
+
+/* Benefits Container */
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.benefit-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  color: #D12124;
+}
+
+.benefit-content {
+  flex-grow: 1;
+}
+
+.benefit-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.benefit-description {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .benefits-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+      font-size: 2rem;
+  }
+
+  .benefit-title {
+      font-size: 1.1rem;
+  }
+
+  .benefit-description {
+      font-size: 0.9rem;
+  }
+}
+
 
 .benefit-number {
   font-size: 2rem;
@@ -3427,4 +3535,458 @@ body, html {
   .benefit-content {
     width: 100%;
   }
+}
+/* Container Section */
+/* Custom Box Style */
+.custom-box {
+  border: 2px solid #D12124;  /* Red border color */
+  border-radius: 15px;  /* Rounded corners */
+  padding: 30px;
+  background-color: #f9f9f9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;  /* Ensures boxes have equal height */
+  transition: all 0.3s ease;  /* Smooth transition for hover */
+}
+
+/* Icon Container */
+.icon-container2 {
+  background-color: aliceblue;
+  border-radius: 50%;  /* Circular background */
+  padding: 20px;
+  color: #D12124;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.icon-container2 i {
+  font-size: 40px;
+}
+
+/* Heading Styling */
+.box-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Paragraph Text Styling */
+.box-text {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-box {
+      padding: 20px;
+  }
+
+  .box-title {
+      font-size: 1rem;
+  }
+
+  .box-text {
+      font-size: 0.85rem;
+  }
+
+  .icon-container2 {
+      width: 70px;
+      height: 70px;
+  }
+
+  .icon-container2 i {
+      font-size: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-box {
+      padding: 15px;
+  }
+
+  .box-title {
+      font-size: 0.9rem;
+  }
+
+  .box-text {
+      font-size: 0.8rem;
+  }
+
+  .icon-container2 {
+      width: 60px;
+      height: 60px;
+  }
+
+  .icon-container2 i {
+      font-size: 30px;
+  }
+}
+.box-head-1{
+  font-size: 40px;
+  color: #D12124;
+  text-align: start;
+  margin-bottom: 30px;
+  justify-content:flex-start;
+}
+.box-para-1{
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 5px;
+}
+
+@media (max-width: 767px) {
+  .box-head-1{
+    font-size: 30px;
+    color: aliceblue;
+    text-align: start;
+    margin-bottom: 30px;
+    justify-content:flex-start;
+  }
+  .box-para-1{
+    font-size: 0.9rem;
+    /* text-align: justify; */
+    margin: 5px;
+  }
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  padding: 60px 0;
+  /* background-color: #1F8BF7; */
+  color: black;
+}.cta-button{
+  background: #D12124;
+  color: white;
+}
+
+/* Centering content and styling the message */
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* CTA Message */
+.cta-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* CTA Button */
+.cta-button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 7px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.cta-button:hover {
+  background-color: #df1529de;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta-message {
+      font-size: 1.25rem;
+  }
+
+  .cta-button {
+      font-size: 0.9rem;
+  }
+}
+
+
+/* Vision AI Section Styles */
+.vision-ai-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 40 0px;
+}
+
+.vision-ai-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.vision-ai-description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vision-ai-title {
+    font-size: 2rem;
+  }
+
+  .vision-ai-description {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .vision-ai-title {
+    font-size: 1.8rem;
+  }
+
+  .vision-ai-description {
+    font-size: 0.95rem;
+  }
+}
+
+.service-item-2 {
+  background-color: #fff; /* Background color of the box */
+  color: #002A5C; /* Text color */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 250px; /* Ensures consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: all 0.3s;
+}
+
+.service-item-2:hover{
+  transform: scale(1);
+  background-color: #D12124;
+  color: aliceblue;
+}
+.service-item-2:hover h5{color: #fff;}
+.section-heading {
+  color: #D12124;
+}
+@media (max-width: 992px) {
+  .service-item-2 {
+      width: 100%; /* Remove fixed height for smaller screens */
+  }
+}
+
+/* box with number*/
+.box {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);; /* Box background color */
+  border: 1px solid #002A5C; /* Border color to match background */
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 250px; /* Adjust width as needed */
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.step-number {
+  background-color: #D12124; /* Background color for step number */
+  color: #fff; /* Color for step number */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  border: 2px solid #fff; /* Border around step number */
+}
+
+.box p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .box {
+      max-width: 100%;
+      margin-right: 0;
+  }
+
+  .step-number {
+      position: static;
+      margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .box {
+      max-width: none; /* Allow full width on smaller screens */
+  }
+
+  .arrow-right {
+      display: none; /* Hide right arrow on small screens */
+  }
+
+  .arrow-down {
+      display: block; /* Show down arrow on small screens */
+      position: relative;
+      margin: 20px auto 0; /* Center down arrow and provide margin */
+      font-size: 24px; /* Adjust size as needed */
+      color: #002A5C;
+  }
+
+  /* Stack boxes vertically on smaller screens */
+  .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .col-md-3 {
+      width: 100%;
+      max-width: none; /* Ensure full width on smaller screens */
+      text-align: center;
+  }
+}
+
+.gradient-section {
+  background: #000; /* Black background */
+  padding: 50px 0; /* Top and bottom spacing */
+  color: #fff; /* White text */
+  
+}
+.gradient-border{
+  border: 4px solid #D12124;
+  border-radius: 10px;
+  padding: 20px;
+}
+.first-row {
+  margin-bottom: 50px;
+}
+
+.section-title3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #D12124; /* Brown color for heading */
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #ccc; /* Light gray text for description */
+}
+
+.second-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.column-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #D12124; /* Brown color for column titles */
+}
+
+.column-description {
+  font-size: 1rem;
+  color: #ccc; /* Light gray text for column descriptions */
+}
+
+@media (max-width: 768px) {
+  .second-row {
+    flex-direction: column; /* Stacks the columns vertically on smaller screens */
+  }
+
+  .column-title {
+    font-size: 1.5rem;
+  }
+
+  .column-description {
+    font-size: 0.9rem;
+  }
+}
+
+.features-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+/*  Solutions vision AI */
+.custom-card {
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid black;
+  max-width: 420px; /* Ensures consistent width across devices */
+}
+
+.custom-card-header {
+  text-align: left;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.custom-card-heading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+  text-align: center;
+}
+
+.custom-card-image-wrapper {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.custom-card-image {
+  border-radius: 4px;
+}
+
+.custom-card-content {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.custom-card-list {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.custom-card-list li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-card-list li:last-child {
+  border-bottom: none;
 }
