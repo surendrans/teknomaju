@@ -517,9 +517,7 @@ h6 {
   padding-top: 30px;
 }
 
-.footer .footer-about .logo {
-  margin-bottom: 20px;
-}
+
 
 .footer .footer-about .logo span {
   color: var(--heading-color);
@@ -599,6 +597,8 @@ h6 {
   margin-top: 6px;
   font-size: 13px;
 }
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -2910,10 +2910,8 @@ section,
 
 /* Box around the image */
 .image-container {
-  background-color: #000; /* Black background */
   padding: 20px; /* Increased space around the image */
   border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
   overflow: hidden; /* Ensures the image fits within the rounded corners */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
   max-width: 100%; /* Ensure the box does not overflow its container */
@@ -2921,7 +2919,6 @@ section,
 
 .image-container:hover {
   transform: scale(1.05); /* Slightly zooms the image on hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* More intense shadow on hover */
 }
 
 /* Ensure image columns are responsive */
@@ -4556,4 +4553,10 @@ p {
   .icons-scroll-container {
     padding: 10px 0;
   }
+}
+/* Footer Logo Styling */
+.footer-logo {
+  max-height: 80px; /* Adjust as needed */
+  width: auto; /* Maintain aspect ratio */
+  margin-bottom: 0;
 }
