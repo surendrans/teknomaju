@@ -3769,7 +3769,7 @@ body, html {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-height: 250px; /* Ensures consistent height */
+  height: 200px; /* Ensures consistent height */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3782,6 +3782,7 @@ body, html {
   color: aliceblue;
 }
 .service-item-2:hover h5{color: #fff;}
+.service-item-2:hover p{color: #fff;}
 .section-heading {
   color: #D12124;
 }
@@ -3860,17 +3861,7 @@ body, html {
   }
 
   /* Stack boxes vertically on smaller screens */
-  .row {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .col-md-3 {
-      width: 100%;
-      max-width: none; /* Ensure full width on smaller screens */
-      text-align: center;
-  }
+  
 }
 
 .gradient-section {
@@ -3989,4 +3980,580 @@ body, html {
 
 .custom-card-list li:last-child {
   border-bottom: none;
+}
+
+/* Unique Centered Section */
+.unique-centered-section {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.unique-centered-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.unique-centered-paragraph {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Unique Services Section */
+.unique-services-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Unique Card Styles */
+.unique-card-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Ensures equal height for all cards */
+  display: flex;
+  flex-direction: column;
+}
+
+.unique-card-img {
+  width: 100%;
+  height: 200px; /* Sets a consistent image size */
+  object-fit: cover; /* Ensures the image fits within the size */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.unique-card-img img{
+  border-radius: 10px;
+}
+
+.unique-card-body {
+  padding: 15px;
+  text-align: center;
+  flex-grow: 1; /* Ensures content fills the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.unique-card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.unique-card-description {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .unique-card-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .unique-centered-heading {
+    font-size: 2rem;
+  }
+
+  .unique-centered-paragraph {
+    font-size: 1rem;
+  }
+}
+
+/* Unique Left-Right Section */
+.unique-left-right-section {
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.unique-left-image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.unique-right-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.unique-right-paragraph {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Bullet Points Style */
+.unique-bullet-points {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.unique-bullet-points li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .unique-left-right-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .unique-left-image {
+    margin-bottom: 20px;
+  }
+
+  .unique-right-heading {
+    font-size: 2rem;
+  }
+
+  .unique-right-paragraph {
+    font-size: 1rem;
+  }
+
+  /* Align bullet points to the start in small screen sizes */
+  .unique-bullet-points {
+    padding-left: 15px;
+    margin-left: 0;
+  }
+  
+  .unique-bullet-points li {
+    text-align: left;
+  }
+}
+/* Unique Why Choose Us Section */
+.unique-why-choose-us-section {
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.unique-choose-image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.unique-choose-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.unique-choose-paragraph {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* List Item Wrapper and Styling */
+.unique-list-wrapper ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.unique-list-item {
+  display: flex;
+  align-items: center;
+  background-color: white; /* White background for list item */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px; /* Margin between list items */
+  transition: transform 0.3s ease-in-out;
+}
+.unique-list-item {
+  display: flex;
+  align-items: center;
+  background-color: white; /* White background for list item */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 15px; /* Margin between list items */
+  transition: transform 0.3s ease-in-out;
+}
+
+.unique-list-item:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+}
+
+.unique-list-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.unique-list-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.unique-list-item {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .unique-why-choose-us-section .row-1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .unique-choose-image {
+    margin-bottom: 20px;
+  }
+
+  .unique-choose-heading {
+    font-size: 2rem;
+  }
+
+  .unique-choose-paragraph {
+    font-size: 1rem;
+  }
+
+  /* Adjust image size on mobile */
+  .unique-list-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .unique-list-item {
+    font-size: 0.9rem;
+  }
+}
+/* Unique How We Do It Section */
+.unique-how-we-do-it {
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Section Heading */
+.unique-how-we-do-it-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #D12124;
+}
+
+/* Column Styling */
+.unique-column {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px; /* Add spacing between columns */
+}
+
+/* Number Box - Circle */
+.unique-number-box {
+  background-color: #f8b400; /* Slight orange background */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto;
+}
+
+.unique-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #D12124; /* Brown color for the number */
+}
+
+/* Column Heading */
+.unique-column-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Column List Items */
+.unique-column-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.unique-column-list li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  /* Center the content and remove the margins for small devices */
+  .row-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .unique-how-we-do-it-heading {
+    font-size: 2rem;
+  }
+
+  .unique-column {
+    width: 100%;
+    margin-bottom: 30px; /* Space between columns */
+  }
+
+  .unique-column-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Cloud-Native Page Styles */
+.cloud-native-centered {
+  color: #333; /* Dark text for contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloud-native-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #D12124; /* Brownish heading color */
+}
+
+.cloud-native-paragraph {
+  font-size: 0.9rem;
+  color: #555; /* Soft gray paragraph text */
+  line-height: 1.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cloud-native-heading {
+    font-size: 2rem;
+  }
+
+  .cloud-native-paragraph {
+    font-size: 1rem;
+  }
+}
+
+
+/* Expertise Section */
+.expertise-section {
+  background: #f8f9fa; /* Light background */
+  color: #333; /* Dark text */
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #D12124; /* Heading color */
+}
+
+/* Expertise Card Styles */
+.expertise-card {
+  background: #fff;
+  border: 1px solid #000; /* 1px solid black border */
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between; /* Ensure equal height for cards */
+}
+
+.expertise-card-img {
+  margin-bottom: 20px;
+  padding: 2px;
+}
+
+.expertise-card-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.expertise-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.expertise-card-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .col-md-6 {
+    margin-bottom: 30px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .expertise-card-title {
+    font-size: 1.25rem;
+  }
+
+  .expertise-card-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    margin-bottom: 30px;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .expertise-card-title {
+    font-size: 1.1rem;
+  }
+
+  .expertise-card-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .expertise-card-title {
+    font-size: 1rem;
+  }
+
+  .expertise-card-description {
+    font-size: 0.85rem;
+  }
+}
+/* DevOps Large Page Section */
+.devops-large-page {
+  background: #f4f7fa;  /* Light background for contrast */
+  color: #333;  /* Dark text for readability */
+  padding: 50px 0;
+}
+
+/* Heading styling */
+.cloud-native-heading {
+  color: #D12124;  /* Highlight color for the heading */
+}
+
+/* Paragraph Text Styling */
+p {
+  font-size: 1rem;
+  color: #000; /* Slightly lighter color for the paragraph */
+  line-height: 1.9;
+}
+
+/* Add shadow on hover for images */
+.devops-large-page img:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  /* Subtle shadow on hover */
+  transform: scale(1.05);  /* Slight zoom effect on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Section Heading and Description */
+.quality-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.quality-description {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Icons Container */
+.icons-scroll-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.icon-item {
+  text-align: center;
+  width: 120px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testing-icon {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Hover effect on icons */
+.icon-item:hover .testing-icon {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.icon-item:hover .icon-label {
+  color: #007bff; /* Change the color of text on hover */
+}
+
+/* Icon Labels Styling */
+.icon-label {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .icon-item {
+    width: 100px;
+  }
+
+  .testing-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .icons-scroll-container {
+    padding: 10px 0;
+  }
 }
