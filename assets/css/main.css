@@ -253,7 +253,7 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
+    padding: 22px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 500; /* Increased font weight for readability */
@@ -366,8 +366,9 @@ h6 {
   }
 
   .navmenu {
-    padding: 0;
+    padding: 22px 0;
     z-index: 9997;
+
   }
 
   .navmenu ul {
@@ -602,7 +603,7 @@ h6 {
   margin-top: 6px;
   font-size: 13px;
 }
-.footer-about img {}
+
 
 
 /* Responsive Styles */
@@ -617,6 +618,11 @@ h6 {
       text-align: left; /* Align logo and paragraph to the left */
   }
 
+  .footer-about img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .footer .social-links {
       justify-content: flex-start; /* Align social links to the start */
       margin-bottom: 20px;
