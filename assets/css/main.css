@@ -269,6 +269,7 @@ h6 {
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
+    text-decoration: none;
     
   }
 
@@ -316,6 +317,7 @@ h6 {
   .navmenu .dropdown .dropdown ul {
     left: 100%; /* Positioned to the right of the parent dropdown */
     top: 0;
+    text-decoration: none;
     display: none; /* Initially hidden */
     opacity: 0;
     visibility: hidden; /* Initially hidden */
@@ -343,6 +345,7 @@ h6 {
 /* Change the color of the icon for active dropdown menu items */
 .navmenu .dropdown-menu a:hover i {
   color: #D12124; /* Ensure icon color changes on hover as well */
+  text-decoration: none;
 }
 
 /* Optional: For better alignment of the dropdown icons and text */
@@ -4333,7 +4336,7 @@ body, html {
 }
 
 .cloud-native-paragraph {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #555; /* Soft gray paragraph text */
   line-height: 1.8;
 }
