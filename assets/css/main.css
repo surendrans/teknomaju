@@ -156,7 +156,7 @@ h6 {
 
 .header .logo img {
   width: 100%;
-  height: 90px;
+  height: 50px;
   margin-right: 8px;
 }
 
@@ -457,7 +457,7 @@ h6 {
   background-color: #ffffff; /* Change to your desired color */
   border: 1px solid #ccc; /* Subtle border */
   border-radius: 8px; /* Rounded corners */
-  padding: 10px 0; /* Spacing inside dropdown */
+  padding: 30px 0; /* Spacing inside dropdown */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
   z-index: 1000; /* Ensure it appears on top */
 }
@@ -577,6 +577,8 @@ h6 {
   display: inline-block;
   line-height: 1.5; /* Adjusted line height */
   padding: 6px;
+  font-size: 14px;
+  font-family: var(--heading-font);
 }
 
 .footer .footer-links ul a:hover {
@@ -600,12 +602,14 @@ h6 {
   margin-top: 6px;
   font-size: 13px;
 }
-
+.footer-about img {}
 
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .footer {
+    display: flex;
+    flex-direction: column;
       text-align: left; /* Align text to the left */
   }
 
@@ -615,6 +619,7 @@ h6 {
 
   .footer .social-links {
       justify-content: flex-start; /* Align social links to the start */
+      margin-bottom: 20px;
   }
 
   .footer .footer-links {
@@ -637,6 +642,8 @@ h6 {
 
 @media (max-width: 576px) {
   .footer .footer-links {
+    display: flex;
+    flex-direction: column;
       margin-bottom: 15px; /* Adjusted bottom margin for smaller devices */
   }
 }
@@ -868,7 +875,7 @@ section,
 .hero:before {
   content: "";
   /* background: color-mix(in srgb, var(--background-color), transparent 40%); */
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.66);
   color: aliceblue;
   position: absolute;
   inset: 0;
@@ -988,7 +995,7 @@ section,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  
+  margin-top: 12px;
 }
 
 .btn-transform:hover {
@@ -1018,38 +1025,6 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Clients Section
---------------------------------------------------------------*/
-.clients {
-  padding: 20px 0;
-}
-
-.clients .client-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.clients .client-logo img {
-  padding: 20px 40px;
-  max-width: 90%;
-  transition: 0.3s;
-  opacity: 0.5;
-  filter: grayscale(100);
-}
-
-.clients .client-logo img:hover {
-  filter: none;
-  opacity: 1;
-}
-
-@media (max-width: 640px) {
-  .clients .client-logo img {
-    padding: 20px;
-  }
-}
 
 /*--------------------------------------------------------------
 # About Section
@@ -3766,16 +3741,19 @@ body, html {
   background-color: #fff; /* Background color of the box */
   color: #002A5C; /* Text color */
   border-radius: 8px;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 200px; /* Ensures consistent height */
   display: flex;
   flex-direction: column;
   justify-content: center;
   transform: all 0.3s;
+  border: 1px solid #000;
 }
 .service-item-2 h5{
   font-size: 26px;
+  font-weight: bold;
+  color: #D12124;
 }
 .service-item-2:hover{
   transform: scale(1);
@@ -3950,7 +3928,7 @@ body, html {
   font-size: 1.25rem;
   font-weight: bold;
   margin: 0;
-  color: #333;
+  color: #D12124;
   text-align: center;
 }
 
@@ -4585,9 +4563,9 @@ p {
 }
 /* Footer Logo Styling */
 .footer-logo {
-  max-height: 80px; /* Adjust as needed */
+  max-height: 40px; /* Adjust as needed */
   width: auto; /* Maintain aspect ratio */
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 /* Main container for IT Governance content */
 .it-governance-container {
