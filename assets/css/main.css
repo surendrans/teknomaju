@@ -867,8 +867,8 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 45%);
-  /* background: rgba(0, 0, 0, 0.5); */
+  /* background: color-mix(in srgb, var(--background-color), transparent 40%); */
+  background: rgba(0, 0, 0, 0.55);
   color: aliceblue;
   position: absolute;
   inset: 0;
