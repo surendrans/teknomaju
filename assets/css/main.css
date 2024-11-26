@@ -1206,7 +1206,7 @@ section,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
   margin: 20px; /* Spacing between cards */
   transition: transform 0.3s; /* Smooth transition on hover */
-  height: 200px; /* Set height for cards */
+  height: 230px; /* Set height for cards */
 }
 
 .icon-card i {
