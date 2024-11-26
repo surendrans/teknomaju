@@ -262,3 +262,34 @@ function validateForm() {
   // If all validations pass
   return true;
 }
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent default form submission
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch('send-email.php', {
+      method: 'POST',
+      body: formData,
+  })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              // Show success toast
+              const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+              successToast.show();
+              form.reset(); // Reset the form on success
+          } else {
+              // Show failure toast
+              const failureToast = new bootstrap.Toast(document.getElementById('failureToast'));
+              failureToast.show();
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          // Show failure toast on error
+          const failureToast = new bootstrap.Toast(document.getElementById('failureToast'));
+          failureToast.show();
+      });
+});

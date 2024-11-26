@@ -171,7 +171,7 @@
     <div class="container" data-aos="fade-up" data-aos-delay="100" id="contact-form">
         <div class="row justify-content-center">
             <div class="col-md-8"> <!-- Centered form with max-width -->
-                <form action="forms/contact.php" method="post" class="php-email-form" onsubmit="return validateForm()">
+                <form action="/forms/contact.php" method="post" class="php-email-form" onsubmit="return validateForm()">
                     <div class="row gy-4">
                         <h2 class="text-center mb-4">Get In Touch</h2> <!-- Form Title -->
     
@@ -206,6 +206,27 @@
                         </div>
                     </div>
                 </form>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <!-- Success Toast -->
+                  <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="d-flex">
+                          <div class="toast-body">
+                              Your message has been sent successfully!
+                          </div>
+                          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                      </div>
+                  </div>
+                  <!-- Failure Toast -->
+                  <div id="failureToast" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="d-flex">
+                          <div class="toast-body">
+                              Failed to send your message. Please try again later.
+                          </div>
+                          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                      </div>
+                  </div>
+              </div>
+              
             </div>
         </div>
         <!-- End Contact Form -->
