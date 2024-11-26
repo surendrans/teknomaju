@@ -962,7 +962,7 @@ section,
   font-size: 20px; /* Reduced font size */
   /* font-weight: 300; */
   color: #fff;
-  margin-bottom: 15px; /* Gap between heading and text */
+  margin-bottom: 20px; /* Gap between heading and text */
 }
 
 /* Container for the Paragraphs */
@@ -975,7 +975,7 @@ section,
   font-size: 16px;
   color: #555;
   line-height: 1.7;
-  margin-bottom: 5px; /* Smaller gap between the two paragraphs */
+  margin-bottom: 10px; /* Smaller gap between the two paragraphs */
 }
 
 /* Second Paragraph as a New Line */
@@ -3620,7 +3620,7 @@ body, html {
   justify-content:flex-start;
 }
 .box-para-1{
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: justify;
   margin: 5px;
 }
@@ -3979,7 +3979,7 @@ body, html {
 }
 
 .unique-centered-paragraph {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
 }
 
@@ -4138,7 +4138,7 @@ body, html {
 }
 
 .unique-choose-paragraph {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
   margin-bottom: 30px;
 }
@@ -4207,7 +4207,7 @@ body, html {
   }
 
   .unique-choose-paragraph {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   /* Adjust image size on mobile */
@@ -4630,7 +4630,7 @@ p {
 
 /* Text within Service Boxes */
 .it-governance-service-text-container {
-  font-size: 16px;
+  font-size: 14px;
   color: #555;
 }
 
