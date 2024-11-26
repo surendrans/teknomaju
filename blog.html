@@ -37,49 +37,89 @@
 </head>
 
 <body class="blog-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+  
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Append</h1><span>.</span>
+        <img src="assets/img/New.svg" alt="">
+        <!-- <h1 class="sitename">TeknoMaju</h1><span>.</span> -->
       </a>
-
+  
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#team">Team</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="who-we-are.html"><span class="me-2">About</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown">
+                <a href="who-we-are.html"><span><i class="bi bi-people-fill icon-gap"></i> Who We are</span></a>
               </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <a href="our-process.html"><span><i class="bi bi-hand-index-thumb icon-gap rotate-icon"></i> Our Process</span></a>
+              <li><a href="careers.html"><span><i class="bi bi-person-workspace icon-gap"></i> Careers</a></span></li>
             </ul>
           </li>
-          <li><a href="index.html#contact">Contact</a></li>
+      
+          <li class="dropdown">
+            <a href="gen-ai.html"><span class="me-2">Services</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown">
+                <a href="gen-ai.html"><span><i class="bi bi-robot icon-gap"></i> AI & Machine Learning Solutions</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="gen-ai.html"><span><i class="bi bi-layers icon-gap"></i> Generative AI Development</span></a>
+                  </li>
+                  <li><a href="vision-ai.html"><span><i class="bi bi-eye icon-gap"></i> Vision AI Solutions</a></span></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="custom-software-dev.html"><span> <i class="bi bi-laptop icon-gap"></i> Enterprise Software Solutions</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="custom-software-dev.html"><span><span><i class="bi bi-code icon-gap"></i> Custom Software Development</span></span></a>
+                  </li>
+                  <li><a href="uiux.html"><span><i class="bi bi-palette icon-gap"></i> UI/UX Design</span></a></li>
+                  <li><a href="it-consult.html"><span><i class="bi bi-shield icon-gap"></i> IT Consulting</span></a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="devops-cloud-native.html"><span><i class="bi bi-cloud-arrow-up icon-gap"></i> Cloud & DevOps for Enterprises</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="devops-cloud-native.html"><span><i class="bi bi-cloud-hail icon-gap"></i> Cloud-Native Enterprise Solutions</span></a>
+                  </li>
+                  <li class="dropdown"><a href="devops-large.html"><span><p><i class="bi bi-arrow-repeat icon-gap"></i> DevOps for Large Enterprises</p></span></a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="blockchain.html"><span class="me-2"> <i class="bi bi-bar-chart icon-gap"></i> Blockchain & Data Engineering Solutions</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="blockchain.html"><span><i class="bi bi-shield icon-gap"></i> Blockchain for Enterprises</span></a>
+                  </li>
+                  <li><a href="dataengineering.html"><span><i class="bi bi-layers icon-gap"></i> Blockchain & Data Engineering Solutions</span></a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="software-testing.html"><span> <i class="bi bi-database icon-gap"></i>Enterprise IT & Testing Solutions</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="software-testing.html"><span><i class="bi bi-bug icon-gap"></i> Software Testing for Enterprises</span></a>
+                  </li>
+                  <li><a href="enterprise-consult.html"><span><i class="bi bi-briefcase icon-gap"></i> IT Consulting for Enterprises</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact us</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
+      
+  
+      <a class="btn-getstarted" href="contact.html#contact-form">Get Started</a>
+  
     </div>
   </header>
 
@@ -120,10 +160,11 @@
                 <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
 
-              <p class="post-category">Politics</p>
+              <p class="post-category">Gen AI</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+                <a href="blog-details.html">How Generative AI and Vision AI Are Revolutionizing Innovation and Why They Matter
+                </a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -139,135 +180,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-lg-4">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Sports</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Entertainment</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Sports</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Non rem rerum nam cum quo minus olor distincti</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-4.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Lisa Neymar</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 30, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-5.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Politics</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-5.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Denis Peterson</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 30, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-6.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Entertainment</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Distinctio provident quibusdam numquam aperiam aut</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-6.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mika Lendon</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Feb 14, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
+         
 
         </div>
       </div>
@@ -280,9 +193,9 @@
       <div class="container">
         <div class="d-flex justify-content-center">
           <ul>
-            <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+            <li><a href="#"  class="active"><i class="bi bi-chevron-left"></i></a></li>
             <li><a href="#">1</a></li>
-            <li><a href="#" class="active">2</a></li>
+            <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
             <li><a href="#">4</a></li>
             <li>...</li>
@@ -296,15 +209,18 @@
 
   </main>
 
+ 
   <footer id="footer" class="footer position-relative light-background">
-
     <div class="container footer-top">
-      <div class="row gy-4">
+      <div class="row align-items-start"> <!-- Ensures horizontal alignment -->
+        <!-- About Section -->
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Append</span>
+            <img src="/assets/img/New.svg" alt="TeknoMaju Logo" class="footer-logo" />
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>A diverse team of developers, analysts, and UX specialists committed to creating enterprise applications
+            and high-quality digital products that transform your ideas into reality, enhance user satisfaction, and
+            support you in achieving your objectives.</p>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -312,53 +228,52 @@
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
+  
+        <!-- Useful Links -->
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="who-we-are.html">About us</a></li>
+            <li><a href="gen-ai.html">Services</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+            
           </ul>
         </div>
-
+  
+        <!-- Our Services -->
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="gen-ai.html">Gen AI</a></li>
+            <li><a href="vision-ai.html">Vision Ai</a></li>
+            <li><a href="contact.html">Cloud-Native</a></li>
+            <li><a href="blockchain.html">Blockchain</a></li>
+            <li><a href="enterprise-consult.html">Enterprise Solution</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+  
+        <!-- Contact Section -->
+        <div class="col-lg-3 col-md-12 text-center text-md-start footer-links">
           <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <ul>
+            <li><a>A108 Adam Street</a></li>
+            <li><a >New York, NY 535022</a></li>
+            <li><a >United States</a></li>
+            <li><strong>Phone:</strong> <a href="tel:60322761447" style="color: #000;">60322761447</a>
+            <li><strong>Email:</strong> <a href="mailto:info@teknomaju.my" style="color: #000;">info@teknomaju.my</a></li>
+          </ul>
+          
         </div>
-
       </div>
     </div>
-
+  
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="sitename">Append</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      <p>© <span>Copyright</span> <strong class="sitename"><a href="index.html">teknoMaju</a></strong> <span>All Rights Reserved</span></p>
     </div>
-
   </footer>
+  
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

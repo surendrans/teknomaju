@@ -37,51 +37,89 @@
 </head>
 
 <body class="blog-details-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+  
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Append</h1><span>.</span>
-                <!-- I want to test -->
-
+        <img src="assets/img/New.svg" alt="">
+        <!-- <h1 class="sitename">TeknoMaju</h1><span>.</span> -->
       </a>
-
+  
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="who-we-are.html"><span class="me-2">About</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown">
+                <a href="who-we-are.html"><span><i class="bi bi-people-fill icon-gap"></i> Who We are</span></a>
               </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <a href="our-process.html"><span><i class="bi bi-hand-index-thumb icon-gap rotate-icon"></i> Our Process</span></a>
+              <li><a href="careers.html"><span><i class="bi bi-person-workspace icon-gap"></i> Careers</a></span></li>
             </ul>
           </li>
-          <li><a href="index.html#contact">Contact</a></li>
+      
+          <li class="dropdown">
+            <a href="gen-ai.html"><span class="me-2">Services</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown">
+                <a href="gen-ai.html"><span><i class="bi bi-robot icon-gap"></i> AI & Machine Learning Solutions</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="gen-ai.html"><span><i class="bi bi-layers icon-gap"></i> Generative AI Development</span></a>
+                  </li>
+                  <li><a href="vision-ai.html"><span><i class="bi bi-eye icon-gap"></i> Vision AI Solutions</a></span></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="custom-software-dev.html"><span> <i class="bi bi-laptop icon-gap"></i> Enterprise Software Solutions</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="custom-software-dev.html"><span><span><i class="bi bi-code icon-gap"></i> Custom Software Development</span></span></a>
+                  </li>
+                  <li><a href="uiux.html"><span><i class="bi bi-palette icon-gap"></i> UI/UX Design</span></a></li>
+                  <li><a href="it-consult.html"><span><i class="bi bi-shield icon-gap"></i> IT Consulting</span></a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="devops-cloud-native.html"><span><i class="bi bi-cloud-arrow-up icon-gap"></i> Cloud & DevOps for Enterprises</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="devops-cloud-native.html"><span><i class="bi bi-cloud-hail icon-gap"></i> Cloud-Native Enterprise Solutions</span></a>
+                  </li>
+                  <li class="dropdown"><a href="devops-large.html"><span><p><i class="bi bi-arrow-repeat icon-gap"></i> DevOps for Large Enterprises</p></span></a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="blockchain.html"><span class="me-2"> <i class="bi bi-bar-chart icon-gap"></i> Blockchain & Data Engineering Solutions</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="blockchain.html"><span><i class="bi bi-shield icon-gap"></i> Blockchain for Enterprises</span></a>
+                  </li>
+                  <li><a href="dataengineering.html"><span><i class="bi bi-layers icon-gap"></i> Blockchain & Data Engineering Solutions</span></a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="software-testing.html"><span> <i class="bi bi-database icon-gap"></i>Enterprise IT & Testing Solutions</span> <i class="bi bi-caret-down-fill toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                    <a href="software-testing.html"><span><i class="bi bi-bug icon-gap"></i> Software Testing for Enterprises</span></a>
+                  </li>
+                  <li><a href="enterprise-consult.html"><span><i class="bi bi-briefcase icon-gap"></i> IT Consulting for Enterprises</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact us</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
+      
+  
+      <a class="btn-getstarted" href="contact.html#contact-form">Get Started</a>
+  
     </div>
   </header>
 
@@ -124,7 +162,7 @@
                   <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
                 </div>
 
-                <h2 class="title">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h2>
+                <h2 class="title">How Generative AI and Vision AI Are Revolutionizing Innovation and Why They Matter</h2>
 
                 <div class="meta-top">
                   <ul>
@@ -134,44 +172,349 @@
                   </ul>
                 </div><!-- End meta top -->
 
+                <!-- Introduction Section -->
+<div class="blog-introduction">
+  <h3 class="intro-heading">Introduction</h3>
+  <p class="intro-text">
+    Artificial Intelligence (AI) continues to redefine what’s possible, with Generative AI and Vision AI emerging as transformative solutions across industries. While Generative AI empowers creativity, content creation, and automation, Vision AI enhances visual data processing, offering breakthroughs in object detection, facial recognition, and more. Together, they are reshaping AI development and unlocking unprecedented opportunities.
+  </p>
+  <p class="intro-text">
+    In this blog, we’ll dive into the world of Generative AI and Vision AI, explore their applications, benefits, and challenges, and answer 5 frequently asked questions (FAQs) to guide your understanding of these game-changing technologies.
+  </p>
+</div>
+
+
                 <div class="content">
-                  <p>
-                    Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                    Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                  </p>
-
-                  <p>
-                    Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi in accusamus harum vel aspernatur. Excepturi numquam nihil cumque odio. Et voluptate cupiditate.
-                  </p>
-
+                  
                   <blockquote>
                     <p>
-                      Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut. Aut eos aliquam doloribus minus autem quos.
+                      Generative AI: Unleashing Creativity Through Machines
+
                     </p>
                   </blockquote>
 
-                  <p>
-                    Sed quo laboriosam qui architecto. Occaecati repellendus omnis dicta inventore tempore provident voluptas mollitia aliquid. Id repellendus quia. Asperiores nihil magni dicta est suscipit perspiciatis. Voluptate ex rerum assumenda dolores nihil quaerat.
-                    Dolor porro tempora et quibusdam voluptas. Beatae aut at ad qui tempore corrupti velit quisquam rerum. Omnis dolorum exercitationem harum qui qui blanditiis neque.
-                    Iusto autem itaque. Repudiandae hic quae aspernatur ea neque qui. Architecto voluptatem magni. Vel magnam quod et tempora deleniti error rerum nihil tempora.
-                  </p>
+                  <h3>What is Generative AI?</h3>
 
-                  <h3>Et quae iure vel ut odit alias.</h3>
                   <p>
-                    Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui. Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum nesciunt aliquid qui.
-                    Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia aut ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima. Exercitationem omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores sint consequatur quidem ea.
-                    Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem. Cum quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
-                  </p>
-                  <img src="assets/img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
+                    Generative AI refers to AI systems that create new content, such as text, images, videos, music, or even code. Powered by advanced models like GANs (Generative Adversarial Networks) and transformers, Generative AI learns from existing data to produce original, high-quality results.
 
-                  <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
-                  <p>
-                    Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut porro autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore. Autem facilis hic dolorum dolores vel.
-                    Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis numquam ut illum ut a quam vitae.
                   </p>
-                  <p>
-                    Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
-                  </p>
+                  <img src="assets/img/blog/blog-img1.jpg" class="img-fluid" alt="">
+
+
+                  <div class="container my-5">
+                    <!-- Applications of Vision AI -->
+                    <h3 class="text-center mb-4">
+                      <strong>Applications of Generative AI</strong>
+                    </h3>
+                    <ul class="list-unstyled">
+                      <li class="mb-3 content">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Content Creation:</strong> Automatic generation of blogs, marketing copy, video scripts, and social media posts.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Design and Art: </strong> Tools like DALL-E and MidJourney allow users to generate artistic visuals based on textual prompts.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Healthcare:</strong> Assists in drug discovery by generating molecular structures for potential treatments.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Gaming and Entertainment: </strong> Creates realistic game characters, virtual environments, and storylines.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong> Coding Assistance:</strong> AI tools like GitHub Copilot auto-generate code snippets, saving developers time.
+                      </li>
+                    </ul>
+                  
+                    <!-- Challenges of Vision AI -->
+                    <h3 class="text-center mb-4">
+                      <strong>Challenges of Generative AI</strong>
+                    </h3>
+                    <ul class="list-unstyled">
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Data Dependency:</strong>  Requires vast, high-quality datasets.
+
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong> Bias and Ethics:</strong> AI models may inadvertently replicate biases present in training data.
+
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong> APlagiarism Concerns: </strong>Risk of generating content too similar to existing works.
+                      </li>
+                    </ul>
+                  </div>
+
+
+        
+
+                </div><!-- End post content -->
+
+                <h2 class="title">Vision AI: Empowering Machines to See and Understand
+                </h2>
+<div class="blog-introduction">
+  <h3 class="intro-heading">What is Vision AI?
+  </h3>
+  <p class="intro-text">
+    Vision AI enables machines to interpret and analyze visual information from images, videos, or live feeds. This field combines computer vision algorithms with deep learning to mimic human visual cognition.
+
+  </p>
+  
+</div>
+
+
+                <div class="content">
+                  
+                  <blockquote>
+                    <p>
+                      Vision AI: Seeing the Future with Precision and Clarity
+
+                    </p>
+                  </blockquote>
+
+                  <img src="assets/img/blog/visionai-blog.jpg" class="img-fluid" alt="">
+
+
+                  
+
+                  <!-- Applications of Vision AI Section -->
+                  <div class="container my-5">
+                    <!-- Applications of Vision AI -->
+                    <h3 class="text-center mb-4">
+                      <strong>Applications of Vision AI</strong>
+                    </h3>
+                    <ul class="list-unstyled">
+                      <li class="mb-3 content">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Object Detection and Recognition:</strong> Used in retail for inventory tracking and in security systems for threat detection.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Healthcare Diagnostics:</strong> Assists doctors in analyzing X-rays, MRIs, and other medical images.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Facial Recognition:</strong> From securing devices to personalized customer experiences, Vision AI is everywhere.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Autonomous Vehicles:</strong> Powers self-driving cars by interpreting traffic signs, obstacles, and pedestrians.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Augmented Reality (AR):</strong> Enhances AR experiences in industries like gaming, retail, and education.
+                      </li>
+                    </ul>
+                  
+                    <!-- Challenges of Vision AI -->
+                    <h3 class="text-center mb-4">
+                      <strong>Challenges of Vision AI</strong>
+                    </h3>
+                    <ul class="list-unstyled">
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Complexity of Visual Data:</strong> Handling diverse and unstructured visual data is a significant challenge.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Privacy Concerns:</strong> Facial recognition raises ethical concerns about surveillance and data misuse.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-hand-index fs-4 text-danger me-3 rotate-icon"></i>
+                        <strong>Real-Time Processing:</strong> Achieving high accuracy with minimal latency is technically demanding.
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  
+                  <!-- Dynamic duo section -->
+
+                  <div class="container my-5">
+                    <!-- Section: Generative AI Meets Vision AI -->
+                    <h3 class="mb-4">
+                      <i class="bi bi-hand-index fs-5 text-danger me-2 rotate-icon"></i>
+                      <strong>Generative AI Meets Vision AI: A Dynamic Duo</strong>
+                    </h3>
+                    <p class="content">
+                      When combined, Generative AI and Vision AI create powerful solutions. For example:
+                    </p>
+                    <ul class="list-unstyled">
+                      <li class="mb-3 d-flex align-items-start">
+                        <div class="content">
+                          <strong>Synthetic Data Generation:</strong> Generative AI creates visual datasets that train Vision AI models, improving accuracy without needing real-world data.
+                        </div>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <div class="content">
+                          <strong>Creative Media Production:</strong> Together, they enable automated video creation by generating scripts, animations, and visual effects.
+                        </div>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <!-- <i class="bi bi-image-fill text-danger me-2"></i> -->
+                        <div class="content">
+                          <strong>Advanced Image Processing:</strong> Generative AI enhances images analyzed by Vision AI for applications like satellite imaging or healthcare diagnostics.
+                        </div>
+                      </li>
+                    </ul>
+                  
+                    <!-- Section: AI Development -->
+                    <h3 class="mt-5 mb-4">
+                      <strong>AI Development: Building Generative AI and Vision AI Solutions</strong>
+                    </h3>
+                    <h5 class="text-danger mb-3">Key Steps in AI Development:</h5>
+                    <ol class="ms-3">
+                      <li class="mb-3 content">
+                        <strong>Define Objectives:</strong> Clearly outline the problem your AI solution will address.
+                      </li>
+                      <li class="mb-3 content">
+                        <strong>Data Collection and Preprocessing:</strong> Gather and clean data, whether it's text, images, or videos.
+                      </li>
+                      <li class="mb-3 content">
+                        <strong>Model Selection:</strong> Choose the right AI model (e.g., transformers for Generative AI, CNNs for Vision AI).
+                      </li>
+                      <li class="mb-3 content">
+                        <strong>Training and Testing:</strong> Train the model using high-quality datasets and refine it based on testing results.
+                      </li>
+                      <li class="mb-3 content">
+                        <strong>Deployment and Maintenance:</strong> Deploy the AI solution and monitor its performance to ensure it meets user expectations.
+                      </li>
+                    </ol>
+                  
+                    <h5 class="text-danger mt-5 mb-3">Tools and Technologies for AI Development:</h5>
+                    <ul class="list-unstyled">
+                      <li class="mb-3 d-flex align-items-start">
+                        <!-- <i class="bi bi-cpu text-danger me-2"></i> -->
+                        <div class="content">
+                          <strong>Frameworks:</strong> TensorFlow, PyTorch, Keras.
+                        </div>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <div class="content">
+                          <strong>Libraries:</strong> OpenCV (for Vision AI), Hugging Face Transformers (for Generative AI).
+                        </div>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <div class="content">
+                          <strong>Hardware:</strong> GPUs and TPUs for faster training and inference.
+                        </div>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <div class="content">
+                          <strong>Platforms:</strong> Google AI Platform, AWS SageMaker, Microsoft Azure AI.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+
+
+
+                  <!-- FAQ -->
+
+                  <h3 class="text-center">5 FAQs About Generative AI and Vision AI
+                  </h3>
+                  <div class="accordion accordion-flush my-3" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          How does Generative AI differ from Vision AI?
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Generative AI focuses on creating new content (text, images, etc.), while Vision AI specializes in analyzing and interpreting visual data. Together, they complement each other in tasks like automated content creation and image enhancement.</div>
+                      </div>
+                    </div>
+                  
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          What industries benefit most from these AI solutions?
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Virtually all industries can benefit, but notable sectors include healthcare, automotive, retail, entertainment, and security. For instance, Generative AI automates creative tasks, while Vision AI enhances surveillance systems and diagnostics.</div>
+                      </div>
+                    </div>
+                  
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Are these technologies accessible to small businesses?
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Yes, many platforms and pre-trained models make it feasible for small businesses to adopt Generative AI and Vision AI without massive budgets. Cloud services like AWS and Google Cloud AI provide cost-effective solutions.</div>
+                      </div>
+                    </div>
+                  
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                          What ethical concerns surround these AI technologies?
+                        </button>
+                      </h2>
+                      <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          Key concerns include: <br>
+                          <strong>Bias:</strong> Both AI types can inherit biases from training data. <br>
+                          <strong>Privacy:</strong> Vision AI, especially facial recognition, may infringe on personal privacy. <br>
+                          <strong>Content Authenticity:</strong> Generative AI could be misused to create deepfakes or plagiarized content.
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                          How can businesses start integrating Generative AI or Vision AI?
+                        </button>
+                      </h2>
+                      <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Begin by identifying use cases that align with your goals, such as automating creative tasks or improving visual analysis. Leverage pre-trained models or partner with AI development experts to speed up implementation.</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <img src="assets/img/blog/dynami-duo-blog.jpg" class="img-fluid" alt="">
+
+
+
+                  <div class="container my-5">
+                    <!-- The Future of AI Development -->
+                    <h3 class="text-center mb-4">
+                      <strong>The Future of AI Development: What Lies Ahead?</strong>
+                    </h3>
+                    <div class="content fs-5">
+                      <p><i class="bi bi-arrow-right-circle-fill text-danger me-3"></i><strong>Hyper-Personalization:</strong> AI will create highly tailored content and experiences for individuals.</p>
+                      <p><i class="bi bi-arrow-right-circle-fill text-danger me-3"></i><strong>Enhanced Realism in AR/VR:</strong> Generative AI will enable lifelike environments, while Vision AI ensures accurate interaction tracking.</p>
+                      <p><i class="bi bi-arrow-right-circle-fill text-danger me-3"></i><strong>Breakthroughs in Medicine:</strong> AI will generate and interpret complex medical data, advancing diagnostics and treatments.</p>
+                      <p><i class="bi bi-arrow-right-circle-fill text-danger me-3"></i><strong>AI-Driven Creativity:</strong> From movies to architecture, AI will revolutionize how we create and consume content.</p>
+                    </div>
+                  
+                    <!-- Conclusion -->
+                    <h3 class="text-center mb-4">
+                      <strong>Conclusion</strong>
+                    </h3>
+                    <div class="content fs-5">
+                      <p>Generative AI and Vision AI represent the cutting edge of AI development, offering solutions that combine creativity, intelligence, and practicality. From automating mundane tasks to enhancing human capabilities, these technologies are paving the way for a smarter, more efficient world.</p>
+                      <p>By understanding their capabilities, addressing challenges, and applying best practices, businesses can harness the full potential of these AI solutions. Whether you’re exploring new opportunities or optimizing existing workflows, Generative AI and Vision AI are tools you can’t afford to ignore.</p>
+                    </div>
+                  </div>
+
+
+                  <a href="/"><h4 class="text-danger">Ready to transform your business? Dive into the world of AI today!</h4></a>
+
+                  
+
+
+              
 
                 </div><!-- End post content -->
 
@@ -460,15 +803,18 @@
 
   </main>
 
+ 
   <footer id="footer" class="footer position-relative light-background">
-
     <div class="container footer-top">
-      <div class="row gy-4">
+      <div class="row align-items-start"> <!-- Ensures horizontal alignment -->
+        <!-- About Section -->
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Append</span>
+            <img src="/assets/img/New.svg" alt="TeknoMaju Logo" class="footer-logo" />
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>A diverse team of developers, analysts, and UX specialists committed to creating enterprise applications
+            and high-quality digital products that transform your ideas into reality, enhance user satisfaction, and
+            support you in achieving your objectives.</p>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -476,53 +822,52 @@
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
+  
+        <!-- Useful Links -->
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="who-we-are.html">About us</a></li>
+            <li><a href="gen-ai.html">Services</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+            
           </ul>
         </div>
-
+  
+        <!-- Our Services -->
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="gen-ai.html">Gen AI</a></li>
+            <li><a href="vision-ai.html">Vision Ai</a></li>
+            <li><a href="contact.html">Cloud-Native</a></li>
+            <li><a href="blockchain.html">Blockchain</a></li>
+            <li><a href="enterprise-consult.html">Enterprise Solution</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+  
+        <!-- Contact Section -->
+        <div class="col-lg-3 col-md-12 text-center text-md-start footer-links">
           <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <ul>
+            <li><a>A108 Adam Street</a></li>
+            <li><a >New York, NY 535022</a></li>
+            <li><a >United States</a></li>
+            <li><strong>Phone:</strong> <a href="tel:60322761447" style="color: #000;">60322761447</a>
+            <li><strong>Email:</strong> <a href="mailto:info@teknomaju.my" style="color: #000;">info@teknomaju.my</a></li>
+          </ul>
+          
         </div>
-
       </div>
     </div>
-
+  
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="sitename">Append</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      <p>© <span>Copyright</span> <strong class="sitename"><a href="index.html">teknoMaju</a></strong> <span>All Rights Reserved</span></p>
     </div>
-
   </footer>
+  
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
