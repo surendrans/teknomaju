@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $to = 'navaneethanvs18@gmail.com';
+    $to = 'info@teknomaju.my';
     $subject = 'New Contact Form Submission';
     $email_content = "Name: $first_name $last_name\n";
     $email_content .= "Email: $email\n";
