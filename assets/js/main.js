@@ -219,59 +219,22 @@
 
 // form validation
 
-function validateForm() {
-  // Get form elements
-  const firstName = document.forms[0]["first-name"].value;
-  const lastName = document.forms[0]["last-name"].value;
-  const email = document.forms[0]["email"].value;
-  const phone = document.forms[0]["phone"].value;
-  const message = document.forms[0]["message"].value;
+function validateForm(event) {
+  event.preventDefault(); // Prevent default submission to validate first
 
-  // Validate First Name
-  if (!firstName) {
-      alert("Please enter your first name.");
+  const form = document.getElementById('contactForm');
+  const phoneField = form.querySelector('input[name="phone"]');
+  const phonePattern = /^(01)[0-46-9]-*[0-9]{7,8}$/;
+
+  if (!phonePattern.test(phoneField.value)) {
+      alert('Please enter a valid Malaysian phone number (e.g., 0123456789).');
       return false;
   }
 
-  // Validate Last Name
-  if (!lastName) {
-      alert("Please enter your last name.");
-      return false;
-  }
-
-  // Validate Email
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email || !emailPattern.test(email)) {
-      alert("Please enter a valid email address.");
-      return false;
-  }
-
-  // Validate Phone Number
-  const phonePattern = /^\d{10}$/;
-  if (!phone || !phonePattern.test(phone)) {
-      alert("Please enter a valid 10-digit phone number.");
-      return false;
-  }
-
-  // Validate Message
-  if (!message) {
-      alert("Please enter a message.");
-      return false;
-  }
-
-  // If all validations pass
-  return true;
-}
-
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // Prevent default form submission
-
-  const form = e.target;
-  const formData = new FormData(form);
-
-  fetch('send-email.php', {
-      method: 'POST',
-      body: formData,
+  // If validation passes, submit the form
+  fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
   })
       .then(response => response.json())
       .then(data => {
@@ -279,7 +242,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
               // Show success toast
               const successToast = new bootstrap.Toast(document.getElementById('successToast'));
               successToast.show();
-              form.reset(); // Reset the form on success
+              form.reset();
           } else {
               // Show failure toast
               const failureToast = new bootstrap.Toast(document.getElementById('failureToast'));
@@ -288,8 +251,9 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
       })
       .catch(error => {
           console.error('Error:', error);
-          // Show failure toast on error
           const failureToast = new bootstrap.Toast(document.getElementById('failureToast'));
           failureToast.show();
       });
-});
+
+  return false; // Ensure the form doesn't reload the page
+}

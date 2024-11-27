@@ -169,44 +169,86 @@
 
     <!-- Contact Form -->
     <div class="container" data-aos="fade-up" data-aos-delay="100" id="contact-form">
-        <div class="row justify-content-center">
-            <div class="col-md-8"> <!-- Centered form with max-width -->
-                <form action="/forms/contact.php" method="post" class="php-email-form" onsubmit="return validateForm()">
-                    <div class="row gy-4">
-                        <h2 class="text-center mb-4">Get In Touch</h2> <!-- Form Title -->
-    
-                        <!-- First Name -->
-                        <div class="col-md-6">
-                            <input type="text" name="first-name" class="form-control" placeholder="First Name" required>
-                        </div>
-    
-                        <!-- Last Name -->
-                        <div class="col-md-6">
-                            <input type="text" name="last-name" class="form-control" placeholder="Last Name" required>
-                        </div>
-    
-                        <!-- Email -->
-                        <div class="col-md-6">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>
-                        </div>
-    
-                        <!-- Phone Number -->
-                        <div class="col-md-6">
-                            <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
-                        </div>
-    
-                        <!-- What's in Your Mind (Textarea) -->
-                        <div class="col-12">
-                            <textarea class="form-control" name="message" rows="6" placeholder="What's in your mind?" required></textarea>
-                        </div>
-    
-                        <!-- Submit Button -->
-                        <div class="col-12 text-center">
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div class="row justify-content-center">
+          <div class="col-md-8"> <!-- Centered form with max-width -->
+              <form 
+                  action="https://api.web3forms.com/submit" 
+                  method="POST" 
+                  id="contactForm" 
+                  class="php-email-form"
+                  onsubmit="return validateForm(event)">
+                  
+                  <!-- Web3Forms Access Key -->
+                  <input type="hidden" name="access_key" value="89c046ff-8f76-47dd-9562-7105809a3576">
+                  
+                  <div class="row gy-4">
+                      <h2 class="text-center mb-4">Get In Touch</h2> <!-- Form Title -->
+  
+                      <!-- First Name -->
+                      <div class="col-md-6">
+                          <input 
+                              type="text" 
+                              name="first-name" 
+                              class="form-control" 
+                              placeholder="First Name" 
+                              required 
+                              pattern="^[A-Za-z\s]+$" 
+                              title="First name should contain only letters and spaces.">
+                      </div>
+  
+                      <!-- Last Name -->
+                      <div class="col-md-6">
+                          <input 
+                              type="text" 
+                              name="last-name" 
+                              class="form-control" 
+                              placeholder="Last Name" 
+                              required 
+                              pattern="^[A-Za-z\s]+$" 
+                              title="Last name should contain only letters and spaces.">
+                      </div>
+  
+                      <!-- Email -->
+                      <div class="col-md-6">
+                          <input 
+                              type="email" 
+                              name="email" 
+                              class="form-control" 
+                              placeholder="Email" 
+                              required>
+                      </div>
+  
+                      <!-- Phone Number -->
+                      <div class="col-md-6">
+                          <input 
+                              type="tel" 
+                              name="phone" 
+                              class="form-control" 
+                              placeholder="Phone Number (e.g., 0123456789)" 
+                              required 
+                              pattern="^(01)[0-46-9]-*[0-9]{7,8}$" 
+                              title="Phone number should follow Malaysian format (e.g., 0123456789).">
+                      </div>
+  
+                      <!-- What's in Your Mind (Textarea) -->
+                      <div class="col-12">
+                          <textarea 
+                              class="form-control" 
+                              name="message" 
+                              rows="6" 
+                              placeholder="What's in your mind?" 
+                              required>
+                          </textarea>
+                      </div>
+  
+                      <!-- Submit Button -->
+                      <div class="col-12 text-center">
+                          <button type="submit" class="btn btn-primary">Send Message</button>
+                      </div>
+                  </div>
+              </form>
+              
+              <div class="toast-container position-fixed bottom-0 end-0 p-3">
                   <!-- Success Toast -->
                   <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
                       <div class="d-flex">
@@ -226,11 +268,9 @@
                       </div>
                   </div>
               </div>
-              
-            </div>
-        </div>
-        <!-- End Contact Form -->
-    </div>
+          </div>
+      </div>
+  </div>
     
 
     <!-- Info and Map Section -->
