@@ -1194,7 +1194,7 @@ section,
   }
 }
 .icon-card-section {
-  padding: 50px 0;
+  padding: 20px 0;
   text-align: center; /* Center the section heading */
 }
 
@@ -1209,6 +1209,7 @@ section,
   margin: 20px; /* Spacing between cards */
   transition: transform 0.3s; /* Smooth transition on hover */
   height: 230px; /* Set height for cards */
+  border: 1px solid #d12124;
 }
 
 .icon-card i {
@@ -1262,7 +1263,6 @@ section,
 
 .dream-career-section p {
   font-size: 16px; /* Paragraph size */
-  color: #000; /* Lighter color for paragraph */
   max-width: 800px; /* Max width for paragraph */
   margin: 0 auto; /* Center the paragraph */
 }
@@ -2472,7 +2472,9 @@ body, html {
   transition: all 0.2s;
 }
 .job-btn:hover{
-  background-color: #d12124d3
+background: transparent;
+color: #d12124;
+  border: 1px solid #d12124;
 }
 
 /* General Container Styling */
