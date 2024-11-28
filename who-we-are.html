@@ -154,12 +154,12 @@
 
  <!-- article section -->
 
- <div class="about-sections container">
-  <!-- First Section -->
-  <div class="row align-items-center mb-5">
+ <section class="about-sections container">
+  <!-- First Section: Our Mission -->
+  <div class="row align-items-center mb-5 motion-section mission" data-aos="fade-up">
     <!-- Image Column -->
-    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
-      <div class="image-container">
+    <div class="col-lg-6 col-md-12 mb-lg-0" data-aos="fade-right">
+      <div class="image-container scale-container">
         <img src="assets/img/mission.jpg" alt="Mission Image" class="img-fluid about-image">
       </div>
     </div>
@@ -170,24 +170,196 @@
       <h2 class="about-heading">Our Mission and the Path!</h2>
       <p class="about-text">Software is created for people, and our mission reflects our commitment to people-centric solutions. We foster an inspiring environment for developing tech and honor the dedication behind exceptional software, delivering futuristic, cost-effective, user-friendly tech.</p>
     </div>
+    
+    <!-- Floating Shapes in Background -->
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
   </div>
 
-  <!-- Second Section -->
-  <div class="row align-items-center">
+  <!-- Second Section: Our Vision -->
+  <div class="row align-items-center motion-section vision" data-aos="fade-up" data-aos-delay="300">
     <!-- Content Column -->
     <div class="col-lg-6 col-md-12" data-aos="fade-left">
       <h2 class="about-heading">Vision and the Future Ahead!</h2>
       <p class="about-text">In the ever-evolving landscape of technology, our vision is to help companies effectively embrace, integrate, and explore emerging technologies for optimal outcomes. We are driven by a passion for building a tech-savvy future and a commitment to cutting-edge solutions.</p>
+      <!-- New Button Below Vision -->
+      <a href="contact.html#contact-form" class="btn-vision">Explore Our Vision</a>
     </div>
 
     <!-- Image Column -->
     <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
-      <div class="image-container">
+      <div class="image-container scale-container">
         <img src="assets/img/vision.jpg" alt="Vision Image" class="img-fluid about-image">
       </div>
     </div>
+
+    <!-- Floating Shapes in Background -->
+    <div class="floating-shape shape-3"></div>
+    <div class="floating-shape shape-4"></div>
   </div>
-</div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+  /* General Layout */
+  .about-sections {
+    position: relative;
+  }
+
+  .motion-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 50px 0;
+    overflow: hidden;
+  }
+
+  .motion-container {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #555;
+    /* margin-bottom: 20px; */
+  }
+
+  /* Buttons */
+  .btn-journey, .btn-vision {
+    background-color: #d12124;
+    color: white;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn-journey:hover, .btn-vision:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+    color: #d12124;
+    border: 1px solid #d12124;
+  }
+
+  .btn-vision {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  /* Image Hover Effect Inside Container */
+  .scale-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .scale-container img {
+    transition: transform 0.3s ease;
+  }
+
+  .scale-container:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Floating Shapes */
+  .floating-shape {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    animation: floatShapes 20s ease-in-out infinite;
+  }
+
+  .shape-1 {
+    top: 15%;
+    left: 5%;
+    animation-delay: 0s;
+  }
+
+  .shape-2 {
+    bottom: 15%;
+    right: 5%;
+    animation-delay: 5s;
+  }
+
+  .shape-3 {
+    top: 50%;
+    right: 20%;
+    animation-delay: 3s;
+  }
+
+  .shape-4 {
+    bottom: 10%;
+    left: 20%;
+    animation-delay: 8s;
+  }
+
+  @keyframes floatShapes {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.1); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  /* Mobile Responsiveness */
+ /* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 1.2rem;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+
+  .floating-shape {
+    width: 120px;
+    height: 120px;
+  }
+
+  .btn-journey, .btn-vision {
+    padding: 10px 20px;
+    margin: 20px 0;
+  }
+
+  /* Adjustments for the space between Mission and Vision */
+  .motion-section {
+    padding: 30px 0; /* Reduce top/bottom padding */
+  }
+
+  .motion-section:first-of-type {
+    margin-bottom: 0; /* Remove margin-bottom between Mission and Vision */
+  }
+
+  .vision {
+    margin-top: -20px; /* Reduce the top margin to bring Vision section closer */
+  }
+}
+
+</style>
+
+<!-- Optional: Add AOS (Animate on Scroll) -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-out',
+    once: true
+  });
+</script>
+
 
 
 <!-- CTA -->

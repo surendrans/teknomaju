@@ -151,28 +151,192 @@
 
     <!-- about section -->
 
-    <div class="about-sections container">
-      <!-- First Section -->
-      <div class="row align-items-center mb-5">
+
+    <section class="about-sections container">
+      <!-- First Section: Our career -->
+      <div class="row align-items-center mb-5 motion-section mission" data-aos="fade-up">
         <!-- Image Column -->
-       
+        <div class="col-lg-6 col-md-12 mb-lg-0" data-aos="fade-right">
+          <div class="image-container scale-container">
+            <img src="assets/img/cus2.jpg" alt="Mission Image" class="img-fluid about-image">
+          </div>
+        </div>
     
         <!-- Content Column -->
         <div class="col-lg-6 col-md-12" data-aos="fade-left">
           <h2 class="about-heading">Elevate Your Digital Journey with Our Expertise</h2>
           <p class="about-text">SBG combines cutting-edge technologies to design and deliver custom software solutions four times faster using AI, ML, React, Cloud, and more. Get in touch for quick and efficient delivery.</p>
-          <a href="contact.html#contact-form" class="btn-journey">Contact us</a>
+          <a href="contact.html#contact-form" class="btn-vision">Reach us</a>
 
         </div>
-        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
-          <div class="image-container">
-            <img src="assets/img/cus2.jpg" alt="Mission Image" class="img-fluid about-image">
-          </div>
-        </div>
+        
+        <!-- Floating Shapes in Background -->
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
       </div>
-  
-    </div>
-
+    
+      
+    </section>
+    
+    <!-- Custom CSS -->
+    <style>
+      /* General Layout */
+      .about-sections {
+        position: relative;
+      }
+    
+      .motion-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 50px 0;
+        overflow: hidden;
+      }
+    
+      .motion-container {
+        text-align: center;
+        z-index: 10;
+        position: relative;
+      }
+    
+      .about-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+      }
+    
+      .about-text {
+        font-size: 1rem;
+        line-height: 1.9;
+        color: #555;
+        /* margin-bottom: 20px; */
+      }
+    
+      /* Buttons */
+      .btn-journey, .btn-vision {
+        background-color: #d12124;
+        color: white;
+        font-weight: bold;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+    
+      .btn-journey:hover, .btn-vision:hover {
+        background-color: #fff;
+        transform: scale(1.05);
+        color: #d12124;
+        border: 1px solid #d12124;
+      }
+    
+      .btn-vision {
+        margin-top: 10px;
+        display: inline-block;
+      }
+    
+      /* Image Hover Effect Inside Container */
+      .scale-container {
+        overflow: hidden;
+        position: relative;
+      }
+    
+      .scale-container img {
+        transition: transform 0.3s ease;
+      }
+    
+      .scale-container:hover img {
+        transform: scale(1.05);
+      }
+    
+      /* Floating Shapes */
+      .floating-shape {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        z-index: 1;
+        animation: floatShapes 20s ease-in-out infinite;
+      }
+    
+      .shape-1 {
+        top: 15%;
+        left: 5%;
+        animation-delay: 0s;
+      }
+    
+      .shape-2 {
+        bottom: 15%;
+        right: 5%;
+        animation-delay: 5s;
+      }
+    
+      .shape-3 {
+        top: 50%;
+        right: 20%;
+        animation-delay: 3s;
+      }
+    
+      .shape-4 {
+        bottom: 10%;
+        left: 20%;
+        animation-delay: 8s;
+      }
+    
+      @keyframes floatShapes {
+        0% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-30px) scale(1.1); }
+        100% { transform: translateY(0) scale(1); }
+      }
+    
+     /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .about-heading {
+        font-size: 1.2rem;
+      }
+    
+      .about-text {
+        font-size: 0.9rem;
+      }
+    
+      .floating-shape {
+        width: 120px;
+        height: 120px;
+      }
+    
+      .btn-journey, .btn-vision {
+        padding: 10px 20px;
+        margin: 20px 0;
+      }
+    
+      /* Adjustments for the space between Mission and Vision */
+      .motion-section {
+        padding: 30px 0; /* Reduce top/bottom padding */
+      }
+    
+      .motion-section:first-of-type {
+        margin-bottom: 0; /* Remove margin-bottom between Mission and Vision */
+      }
+    
+      .vision {
+        margin-top: -20px; /* Reduce the top margin to bring Vision section closer */
+      }
+    }
+    
+    </style>
+    
+    <!-- Optional: Add AOS (Animate on Scroll) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-out',
+        once: true
+      });
+    </script>
     <!-- middle black section -->
 
     <section class="gradient-section py-5">
@@ -211,14 +375,14 @@
       </div>
     </section>
     
-    <section class="unique-centered-section py-5 text-center">
+    <section class="unique-centered-section py-5 text-center my-5">
       <div class="container">
         <!-- Centered Heading and Paragraph -->
         <h2 class="unique-centered-heading mb-3">Business Analysis & Strategy</h2>
         <p class="unique-centered-paragraph mb-5">We perform a thorough analysis of your business data, structure, and goals to create a strategic plan, ensuring your custom software provides optimal value to your teams.</p>
         
         <!-- Services Heading -->
-        <h2 class="unique-services-heading text-center mb-4">Our Services</h2>
+        <h2 class="unique-services-heading text-center mb-4 mt-5">Our Services</h2>
         
         <!-- Cards Section -->
         <div class="row g-4">
@@ -304,7 +468,7 @@
 
     <!-- create one app section -->
 
-    <section class="unique-left-right-section py-5">
+    <section class="unique-left-right-section py-5 mt-5">
       <div class="container">
           <div class="row align-items-center">
               <!-- Left Image -->
